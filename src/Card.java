@@ -42,6 +42,11 @@ public class Card {
             return suit;
     }
 
+    public static List<String> getSuits()
+    {
+        return Arrays.asList("hearts","diamonds","spades","clubs");
+    }
+
     /**
      * This method will validate that the argument is in the collection of "hearts","diamonds","spades","clubs".
      * @param suit - this is a String to represent the suit of the card.
@@ -49,7 +54,7 @@ public class Card {
 
     public void setSuit(String suit) {
         suit = suit.toLowerCase();
-        List<String> validSuits = Arrays.asList("hearts","diamonds","spades","clubs");
+        List<String> validSuits = getSuits();
         if (validSuits.contains((suit)))
             this.suit = suit;
         else
